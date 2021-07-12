@@ -15,8 +15,8 @@ let weather = {
             return response.json();
         })
         .then((data) => this.displayWeather(data));
-
     },
+
     displayWeather: function(data) {
         const { name } = data;
         const [{ description, icon }] = data.weather;
@@ -47,4 +47,4 @@ document.querySelector(".search-bar").addEventListener("keyup", function(event) 
     }
 });
 
-weather.fetchWeather("Delhi");
+weather.fetchWeather("Mumbai");
